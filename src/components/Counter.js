@@ -1,6 +1,6 @@
 import React, { Component } from 'react';
 
-export default class Counter extends Component {
+class Counter extends Component {
     constructor(props) {
         super(props);
 
@@ -27,3 +27,5 @@ export default class Counter extends Component {
         );
     }
 }
+
+export default Counter;
