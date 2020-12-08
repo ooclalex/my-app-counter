@@ -1,6 +1,6 @@
 import React, { Component } from 'react';
+import CounterGroupSumContainer from '../containers/CounterGroupSumContainer';
 import CounterGroup from "./CounterGroup"
-import CounterGroupSum from "./CounterGroupSum"
 
 class MultiCounter extends Component {
     constructor(props) {
@@ -25,7 +25,7 @@ class MultiCounter extends Component {
         return (
             <div>
                 <input type="number" value={size} onChange={this.onChange} />
-                <CounterGroupSum sum={sum} />
+                <CounterGroupSumContainer sum={sum} />
                 <CounterGroup size={size} add={this.add} />
             </div>
         );
