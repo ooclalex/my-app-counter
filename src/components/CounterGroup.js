@@ -1,5 +1,5 @@
 import React, { Component } from 'react';
-import Counter from "./Counter";
+import CounterContainer from '../containers/CounterContainer';
 
 class CounterGroup extends Component {
     initArraySize = (size) => {
@@ -17,7 +17,7 @@ class CounterGroup extends Component {
             <div>
                 {
                     initArraySize.map((value) => 
-                        <Counter add={this.props.add} />
+                        <CounterContainer key={value} />
                     )
                 }
             </div>

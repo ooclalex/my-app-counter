@@ -11,13 +11,11 @@ class MultiCounter extends Component {
             sum: 0
         };
     }
+
     onChange = (event) => {
+        console.log(event.target.value, this.state);
         this.setState({size: event.target.value})
     };
-
-    add = (value) => {
-        this.setState((prevState) => ({sum: prevState.sum + value}));
-    }
 
     render() {
         const size = this.state.size;
@@ -26,7 +24,7 @@ class MultiCounter extends Component {
             <div>
                 <input type="number" value={size} onChange={this.onChange} />
                 <CounterGroupSumContainer sum={sum} />
-                <CounterGroup size={size} add={this.add} />
+                <CounterGroup size={size} />
             </div>
         );
     }
