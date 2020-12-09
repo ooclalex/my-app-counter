@@ -4,9 +4,7 @@ import CounterContainer from '../containers/CounterContainer';
 class CounterGroup extends Component {
     initArraySize = (size) => {
         const number = size.length > 0 ? parseInt(size) : 0;
-        console.log(Array.from(Array(number).keys()));
         return Array.from(Array(number).keys());
-
     };
 
     render() {
